@@ -104,13 +104,13 @@ using if, else & else if statements-->
 
     <script>
         var time = prompt("Enter Time in 24 Hours Format: i.e 1300");
-        if (time => 0000 && time < 1200) {
+        if (time >= 0000 && time < 1200) {
             alert("Good Morning");
-        } else if (time => 1200 && time < 1700) {
+        } else if (time >= 1200 && time < 1700) {
             alert("Good Afternoon");
-        } else if (time => 1700 && time < 2100) {
+        } else if (time >= 1700 && time < 2100) {
             alert("Good Evening");
-        } else if (time => 2100 && time <= 2359) {
+        } else if (time >= 2100 && time <= 2359) {
             alert("Good Night");
         } else {
             alert("You may going wrong way please entered valid time");
@@ -122,8 +122,14 @@ using if, else & else if statements-->
 a variable. Check & notify the user whether it is a leap year or
 not.-->
     <script>
-        var userInput = +prompt("Enter any year to check Leap or Not");
-        var yearforleap = .getFullYear(userInput);
+        var year = +prompt("Enter any year");
+        var LeapYear = year % 4;
+
+        if (LeapYear === 0) {
+            alert("This is Leap Year");
+        } else {
+            alert("This is not leap year");
+        }
     </script>
 
 
@@ -182,6 +188,7 @@ the hour is between 5 and 8 p.m., tell the user, "It's dinner
 time." For any other hours, tell the user, "Sorry, you'll have to
 wait, or go get a snack." (Hint: Store the hour in 24 hours clock
 format i.e. 14 for 2pm , 15 for 3pm)-->
+
     <script>
         var userNum = +prompt("Waht is the current time mentioned in 24 hours format");
         if (userNum >= 6 && userNum < 10) {
@@ -204,6 +211,9 @@ the type of that variable is a "number", "string", "boolean" or
 
 
     <script>
+         var userInput = prompt("Enter any thing & find its typeof");
+        console.log(typeof(userInput));
+
     </script>
 
 
@@ -218,29 +228,30 @@ and returns true if it is a vowel, false otherwise.-->
 
         switch (userVowels) {
             case "a":
-                alert("true");
+                alert(true);
                 break;
 
             case "e":
-                alert("true");
+                alert(true);
                 break;
 
             case "i":
-                alert("true");
+                alert(true);
                 break;
 
             case "o":
-                alert("true");
+                alert(true);
                 break;
 
             case "u":
-                alert("true");
+                alert(true);
                 break;
 
-                Default:
-                    alert("false");
+            default :
+            alert(false);
         }
     </script>
+
 
     <!--18. Choose the correct comparison operator to display "true",
 when:
