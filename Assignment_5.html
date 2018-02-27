@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment # 5</title>
+</head>
+
+<body>
+
+
+    <!--1. Write a program to check whether the given input number is
+divisible by 3 or else show a message “Number is not divisible
+by 3”.-->
+
+    <script>
+        var user1stInput = +prompt("Enter any Number");
+        var user2ndInput = 3;
+        var userAnswer = user1stInput % user2ndInput;
+        if (userAnswer === 0) {
+            alert("This is divisible");
+        } else {
+            alert("This is not divisible");
+        }
+    </script>
+
+
+
+    <!--2. Write a program that checks whether the given input is an even
+number or an odd number.-->
+
+    <script>
+        var user1stInput = +prompt("Enter any Number");
+        if (user1stInput % 2 === 0) {
+            alert("This Even");
+        } else {
+            alert("This is ODD");
+        }
+    </script>
+
+    <!--3. Write an if/else statement with the following condition:
+If the variable age is greater than 18, output "Old enough",
+otherwise output "Too young".-->
+
+
+
+    <script>
+        var userAge = +prompt("Enter any Number");
+        if (userAge < 18) {
+            alert("Too Young");
+        } else {
+            alert("Old Enough");
+        }
+    </script>
+
+
+
+    <!--5. Write a program to check whether the given input number is
+divisible by 3 or not by using Switch Case statements. Show a
+message “Number is not divisible by 3” or “Number is divisible
+by 3”..-->
+
+
+
+    <script>
+        var user1stInput = +prompt("Enter any Number");
+        var user2ndInput = 3;
+        var userAns = user1stInput % 3;
+
+        switch (userAns) {
+            case 0:
+                alert("Divisible by 3");
+                break;
+
+            default:
+                alert("Not Divisible by 3");
+        }
+    </script>
+
+    <!--10. Write a program that
+a. Store correct password in a JS variable.
+b. Asks user to enter his/her password
+c. Validate the two passwords:
+i. Check if user has entered password. If not, then give
+message “ Please enter your password”
+ii. Check if both passwords are same. If they are same,
+show message “Correct! The password you entered
+matches the original password”. Show “Incorrect
+password” otherwise.-->
+
+
+    <script>
+        var userPassword = prompt("Create Your Passsword");
+        var userConfirmPassword = prompt("Confirm Your Passsword");
+        if (userPassword === userConfirmPassword) {
+            alert("You Entered Correct Paasword");
+        } else {
+            alert("You didn't Enter Correct Password");
+        }
+    </script>
+
+    <!--8. Write a program that takes time as input from user in 24 hours
+clock format like: 1900 = 7pm. Implement the following case
+using if, else & else if statements-->
+
+    <script>
+        var time = prompt("Enter Time in 24 Hours Format: i.e 1300");
+        if (time => 0000 && time < 1200) {
+            alert("Good Morning");
+        } else if (time => 1200 && time < 1700) {
+            alert("Good Afternoon");
+        } else if (time => 1700 && time < 2100) {
+            alert("Good Evening");
+        } else if (time => 2100 && time <= 2359) {
+            alert("Good Night");
+        } else {
+            alert("You may going wrong way please entered valid time");
+        }
+    </script>
+
+
+    <!--9. Write a program that takes a calendar year in YYYY format in
+a variable. Check & notify the user whether it is a leap year or
+not.-->
+    <script>
+        var userInput = +prompt("Enter any year to check Leap or Not");
+        var yearforleap = .getFullYear(userInput);
+    </script>
+
+
+    <!--12. This if/else statement does not work. Try to fix it:
+var greeting;
+var hour = 13;
+if (hour < 18) {
+greeting = "Good day";
+else
+greeting = "Good evening";
+}-->
+    <script>
+        var greeting;
+        var hour = 13;
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+    </script>
+
+    <!--13. Write a JavaScript program that accept two integers and
+display the larger. Also show if the two integers are equal.-->
+    <script>
+        var userNum = +prompt("Enter 1st Operand");
+        var userNum2 = +prompt("Enter 2nd Operand");
+        if (userNum > userNum2) {
+            alert(userNum + " is greater than " + userNum2);
+        } else if (userNum2 > userNum) {
+            alert(userNum2 + " is greater than " + userNum);
+        } else if (userNum === userNum2) {
+            alert(userNum + " & " + userNum2 + "both are equal");
+        }
+    </script>
+
+
+
+    <!--14. Write a program that takes input a number from user & state
+whether the number is positive, negative or zero.-->
+    <script>
+        var userNum = +prompt("Enter any number");
+        if (userNum > 0) {
+            alert(userNum + " is Positive Number");
+        } else if (userNum < -1) {
+            alert(userNum + " is Negative Number");
+        } else if (userNum === 0) {
+            alert(" Your Number is Zero");
+        }
+    </script>
+
+
+    <!--15. Ask the user what the current hour is. If the hour is between
+6 and 9 a.m., tell the user, "Breakfast is served." If the hour is
+between 11 a.m. and 1 p.m., tell the user, "Time for lunch." If
+the hour is between 5 and 8 p.m., tell the user, "It's dinner
+time." For any other hours, tell the user, "Sorry, you'll have to
+wait, or go get a snack." (Hint: Store the hour in 24 hours clock
+format i.e. 14 for 2pm , 15 for 3pm)-->
+    <script>
+        var userNum = +prompt("Waht is the current time mentioned in 24 hours format");
+        if (userNum >= 6 && userNum < 10) {
+            alert("Its Breakfast Time");
+        } else if (userNum >= 13 && userNum < 15) {
+            alert("Its Lunch Time");
+        } else if (userNum >= 15 && userNum < 18) {
+            alert("Its Tea Time");
+        } else if (userNum >= 19 && userNum < 22) {
+            alert("Its Dinner Time");
+        } else {
+            alert("No service availabe at this time");
+        }
+    </script>
+
+
+    <!--16. Write a program that stores value in a variable & tell whether
+the type of that variable is a "number", "string", "boolean" or
+“undefined”-->
+
+
+    <script>
+    </script>
+
+
+    <!--17. Write a program that takes a character (i.e. string of length 1)
+and returns true if it is a vowel, false otherwise.-->
+
+
+    <script>
+        var userInput = prompt("Enter Any Word");
+        userInput = userInput.toLowerCase();
+        var userVowels = userInput.slice(0, 1)
+
+        switch (userVowels) {
+            case "a":
+                alert("true");
+                break;
+
+            case "e":
+                alert("true");
+                break;
+
+            case "i":
+                alert("true");
+                break;
+
+            case "o":
+                alert("true");
+                break;
+
+            case "u":
+                alert("true");
+                break;
+
+                Default:
+                    alert("false");
+        }
+    </script>
+
+    <!--18. Choose the correct comparison operator to display "true",
+when:
+10 is NOT equal to 8.-->
+
+
+    <script>
+        var a = 10;
+        var b = 8;
+        var answer = 10 != 8;
+        alert(answer);
+    </script>
+
+
+    <!--19. Use a switch statement to rewrite the following JavaScript
+code. Prompt the user for the number of a month rather than
+setting it to 8:-->
+
+
+    <script>
+        var userMonth = +prompt("Enter any Month number  1 to 12");
+        switch (userMonth) {
+            case 1:
+                alert("It's Jan");
+                break;
+
+            case 2:
+                alert("It's Feb");
+                break;
+
+            case 3:
+                alert("It's Mar");
+                break;
+
+            case 4:
+                alert("It's Apr");
+                break;
+
+            case 5:
+                alert("It's May");
+                break;
+
+            case 6:
+                alert("It's Jun");
+                break;
+
+            case 7:
+                alert("It's Jul");
+                break;
+
+            case 8:
+                alert("It's Aug");
+                break;
+
+            case 9:
+                alert("It's Sep");
+                break;
+
+            case 10:
+                alert("It's Oct");
+                break;
+
+            case 11:
+                alert("It's Nov");
+                break;
+
+            case 12:
+                alert("It's Dec");
+                break;
+
+                Default:
+                    alert("Invalid Number there  is no such month exists");
+        }
+    </script>
+
+
+
+    <!--20. Use a conditional (ternary) operator for this exercise:
+If the variable age is a value below 18, the value of the variable
+voteable should be "Too young",
+otherwise the value of voteable should be "Old enough".-->
+
+
+    <script>
+        var voteAge = +prompt("Enter You Age: i.e 19");
+        if (voteAge >= 18) {
+            alert("Old Enough");
+        } else {
+            alert("Too Young !!");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
